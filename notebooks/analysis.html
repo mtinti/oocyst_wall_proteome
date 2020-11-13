@@ -18429,10 +18429,23 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;srank&#39;</span><span class="p">)[[</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span><span class="s1">&#39;FDR&#39;</span><span class="p">,</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;SP(Sec/SPI)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!sed -r &#39;s/\s+//g&#39; CryptoDB-45_CparvumIowaII_AnnotatedProteins.fasta.phobius.out</span>
 </pre></div>
 
     </div>
@@ -18445,7 +18458,150 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[110]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>sed: illegal option -- r
+usage: sed script [-Ealn] [-i extension] [file ...]
+       sed [-Ealn] [-i extension] [-e script] ... [-f script_file] ... [file ...]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">phobius</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../CryptoDB-45_CparvumIowaII_AnnotatedProteins.fasta.phobius.out&#39;</span><span class="p">,</span>
+                      <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#phobius.columns = [&#39;TM&#39;,&#39;&#39;]</span>
+<span class="n">phobius</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[142]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TM</th>
+      <th>SP</th>
+      <th>PREDICTION</th>
+    </tr>
+    <tr>
+      <th>SEQENCE_ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cgd1_10-RA-p1</th>
+      <td>11</td>
+      <td>0</td>
+      <td>i20-43o63-83i104-125o145-172i219-242o248-269i2...</td>
+    </tr>
+    <tr>
+      <th>cgd1_100-RA-p1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>o</td>
+    </tr>
+    <tr>
+      <th>cgd1_1000-RA-p1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>o</td>
+    </tr>
+    <tr>
+      <th>cgd1_1010-RA-p1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>o</td>
+    </tr>
+    <tr>
+      <th>cgd1_1023-RA-p1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>o</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">phobius</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;srank&#39;</span><span class="p">)[[</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span><span class="s1">&#39;FDR&#39;</span><span class="p">,</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;SP(Sec/SPI)&#39;</span><span class="p">,</span><span class="s1">&#39;TM&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[146]:</div>
 
 
 
@@ -18472,6 +18628,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <th>FDR</th>
       <th>desc</th>
       <th>SP(Sec/SPI)</th>
+      <th>TM</th>
     </tr>
   </thead>
   <tbody>
@@ -18481,6 +18638,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Oocyst wall protein 8</td>
       <td>0.971491</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_2090-RA-p1</th>
@@ -18488,6 +18646,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Growth factor receptor cysteine-rich domain co...</td>
       <td>0.994961</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd2_490-RA-p1</th>
@@ -18495,6 +18654,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.941848</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd3_190-RA-p1</th>
@@ -18502,6 +18662,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Fibrillin/EGF-like calcium-binding conserved s...</td>
       <td>0.831117</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_210-RA-p1</th>
@@ -18509,6 +18670,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Oocyst wall protein 9</td>
       <td>0.985553</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd7_850-RA-p1</th>
@@ -18516,6 +18678,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Patched family protein/Sterol-sensing domain-c...</td>
       <td>0.002498</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>cgd2_2510-RA-p1</th>
@@ -18523,6 +18686,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Glucose-methanol-choline oxidoreductase</td>
       <td>0.853933</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_2470-RA-p1</th>
@@ -18530,6 +18694,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Sulfhydryl oxidase</td>
       <td>0.000349</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>cgd7_1800-RA-p1</th>
@@ -18537,6 +18702,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Chitin-binding type-2 domain containing protein</td>
       <td>0.287464</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd6_4640-RA-p1</th>
@@ -18544,6 +18710,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.729920</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_2920-RA-p1</th>
@@ -18551,6 +18718,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.001277</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd8_4230-RA-p1</th>
@@ -18558,6 +18726,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Glucose-methanol-choline oxidoreductase</td>
       <td>0.454239</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd4_3090-RA-p1</th>
@@ -18565,6 +18734,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Oocyst wall protein 6</td>
       <td>0.999096</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_3820-RA-p1</th>
@@ -18572,6 +18742,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Aspartic peptidase A1 family</td>
       <td>0.970210</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd7_180-RA-p1</th>
@@ -18579,6 +18750,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.981498</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd5_3073-RA-p1</th>
@@ -18586,6 +18758,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Carboxylic ester hydrolase</td>
       <td>0.345732</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd1_370-RA-p1</th>
@@ -18593,6 +18766,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>carboxypeptidase A with signal peptide region</td>
       <td>0.164825</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd7_3110-RA-p1</th>
@@ -18600,6 +18774,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>S1/P1 nuclease</td>
       <td>0.950841</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd3_1540-RA-p1</th>
@@ -18607,6 +18782,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Signal peptide containing protein</td>
       <td>0.978553</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd7_4560-RA-p1</th>
@@ -18614,6 +18790,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Sushi/SCR/CCP/SbsA/lg-like domain containing p...</td>
       <td>0.811518</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>cgd7_400-RA-p1</th>
@@ -18621,6 +18798,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.925396</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_2900-RA-p1</th>
@@ -18628,6 +18806,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Exostosin-like protein</td>
       <td>0.001078</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd1_3550-RA-p1</th>
@@ -18635,6 +18814,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Apple domain containing protein</td>
       <td>0.001928</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_4840-RA-p1</th>
@@ -18642,6 +18822,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Serine protease, subtilase family, signal peptide</td>
       <td>0.744158</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd8_5090-RA-p1</th>
@@ -18649,6 +18830,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.000475</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd6_1450-RA-p1</th>
@@ -18656,6 +18838,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Polysaccharide pyruvyl transferase with Fringe...</td>
       <td>0.825723</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd7_2583-RA-p1</th>
@@ -18663,6 +18846,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Polysaccharide pyruvyl transferase</td>
       <td>0.003773</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>cgd6_300-RA-p1</th>
@@ -18670,6 +18854,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.001128</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd4_670-RA-p1</th>
@@ -18677,6 +18862,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Oocyst wall protein 3</td>
       <td>0.985217</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd2_3780-RA-p1</th>
@@ -18684,6 +18870,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.984378</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_4440-RA-p1</th>
@@ -18691,6 +18878,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00000</td>
       <td>Uncharacterized protein</td>
       <td>0.000378</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd4_500-RA-p1</th>
@@ -18698,6 +18886,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00020</td>
       <td>Oocyst wall protein 7</td>
       <td>0.568969</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd3_1220-RA-p1</th>
@@ -18705,6 +18894,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00020</td>
       <td>Hyaluronan/mRNA-binding protein</td>
       <td>0.002407</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd2_850-RA-p1</th>
@@ -18712,6 +18902,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00020</td>
       <td>Uncharacterized protein</td>
       <td>0.544608</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd7_5150-RA-p1</th>
@@ -18719,6 +18910,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00020</td>
       <td>Chitin-binding type-2 domain containing protein</td>
       <td>0.985015</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd1_800-RA-p1</th>
@@ -18726,6 +18918,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00020</td>
       <td>Protein disulfide isomerase</td>
       <td>0.752807</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd2_3320-RA-p1</th>
@@ -18733,6 +18926,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00034</td>
       <td>Papain family cysteine protease</td>
       <td>0.822804</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd2_2120-RA-p1</th>
@@ -18740,6 +18934,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00034</td>
       <td>High mobility group box domain containing protein</td>
       <td>0.000366</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd3_440-RA-p1</th>
@@ -18747,6 +18942,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00034</td>
       <td>C-type lectin containing protein</td>
       <td>0.001844</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd8_600-RA-p1</th>
@@ -18754,6 +18950,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00034</td>
       <td>Serine aminopeptidase, S33</td>
       <td>0.468104</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd1_3560-RA-p1</th>
@@ -18761,6 +18958,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00034</td>
       <td>Uncharacterized protein</td>
       <td>0.000253</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd8_3330-RA-p1</th>
@@ -18768,6 +18966,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00034</td>
       <td>Translation initiation factor 1A</td>
       <td>0.002047</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd5_4230-RA-p1</th>
@@ -18775,6 +18974,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00043</td>
       <td>EGF-like domain containing protein</td>
       <td>0.569876</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>cgd8_2800-RA-p1</th>
@@ -18782,6 +18982,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00082</td>
       <td>Signal peptide LNR (Lin-12/Notch) repeat conta...</td>
       <td>0.906944</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd8_3350-RA-p1</th>
@@ -18789,6 +18990,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00082</td>
       <td>Oocyst wall protein 4</td>
       <td>0.958276</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd6_1990-RA-p1</th>
@@ -18796,6 +18998,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00082</td>
       <td>Uncharacterized protein</td>
       <td>0.280295</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd4_3550-RA-p1</th>
@@ -18803,6 +19006,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00115</td>
       <td>Secreted Kazal domain-containing protein</td>
       <td>0.859054</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd3_3700-RA-p1</th>
@@ -18810,6 +19014,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00127</td>
       <td>Uncharacterized protein</td>
       <td>0.369615</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>cgd2_3050-RA-p1</th>
@@ -18817,6 +19022,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00160</td>
       <td>Uncharacterized protein</td>
       <td>0.001329</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>cgd1_3690-RA-p1</th>
@@ -18824,6 +19030,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
       <td>0.00169</td>
       <td>Aspartyl (Acid) protease</td>
       <td>0.749995</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -18838,7 +19045,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;final.csv&#39;</span><span class="p">)</span>
@@ -18851,7 +19058,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html_toc analysis.ipynb
@@ -18901,7 +19108,7 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
 [NbConvertApp] Making directory analysis_files
 [NbConvertApp] Making directory analysis_files
 [NbConvertApp] Making directory analysis_files
-[NbConvertApp] Writing 474964 bytes to analysis.html
+[NbConvertApp] Writing 479897 bytes to analysis.html
 </pre>
 </div>
 </div>
