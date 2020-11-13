@@ -18415,13 +18415,497 @@ SPORO_vs_WALL_2: there are 87 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">signalP</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../CryptoDB-45_CparvumIowaII_AnnotatedProteins_summary.signalp5&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">final</span> <span class="o">=</span> <span class="n">viz</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">signalP</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;srank&#39;</span><span class="p">)[[</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span><span class="s1">&#39;FDR&#39;</span><span class="p">,</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;SP(Sec/SPI)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[110]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>srank</th>
+      <th>FDR</th>
+      <th>desc</th>
+      <th>SP(Sec/SPI)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cgd6_200-RA-p1</th>
+      <td>-12541.852037</td>
+      <td>0.00000</td>
+      <td>Oocyst wall protein 8</td>
+      <td>0.971491</td>
+    </tr>
+    <tr>
+      <th>cgd6_2090-RA-p1</th>
+      <td>-12091.149570</td>
+      <td>0.00000</td>
+      <td>Growth factor receptor cysteine-rich domain co...</td>
+      <td>0.994961</td>
+    </tr>
+    <tr>
+      <th>cgd2_490-RA-p1</th>
+      <td>-6573.067891</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.941848</td>
+    </tr>
+    <tr>
+      <th>cgd3_190-RA-p1</th>
+      <td>-4506.040900</td>
+      <td>0.00000</td>
+      <td>Fibrillin/EGF-like calcium-binding conserved s...</td>
+      <td>0.831117</td>
+    </tr>
+    <tr>
+      <th>cgd6_210-RA-p1</th>
+      <td>-3629.733883</td>
+      <td>0.00000</td>
+      <td>Oocyst wall protein 9</td>
+      <td>0.985553</td>
+    </tr>
+    <tr>
+      <th>cgd7_850-RA-p1</th>
+      <td>-3296.277343</td>
+      <td>0.00000</td>
+      <td>Patched family protein/Sterol-sensing domain-c...</td>
+      <td>0.002498</td>
+    </tr>
+    <tr>
+      <th>cgd2_2510-RA-p1</th>
+      <td>-3243.654672</td>
+      <td>0.00000</td>
+      <td>Glucose-methanol-choline oxidoreductase</td>
+      <td>0.853933</td>
+    </tr>
+    <tr>
+      <th>cgd6_2470-RA-p1</th>
+      <td>-2927.689021</td>
+      <td>0.00000</td>
+      <td>Sulfhydryl oxidase</td>
+      <td>0.000349</td>
+    </tr>
+    <tr>
+      <th>cgd7_1800-RA-p1</th>
+      <td>-2237.416584</td>
+      <td>0.00000</td>
+      <td>Chitin-binding type-2 domain containing protein</td>
+      <td>0.287464</td>
+    </tr>
+    <tr>
+      <th>cgd6_4640-RA-p1</th>
+      <td>-2205.586855</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.729920</td>
+    </tr>
+    <tr>
+      <th>cgd6_2920-RA-p1</th>
+      <td>-1766.812771</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.001277</td>
+    </tr>
+    <tr>
+      <th>cgd8_4230-RA-p1</th>
+      <td>-1393.992373</td>
+      <td>0.00000</td>
+      <td>Glucose-methanol-choline oxidoreductase</td>
+      <td>0.454239</td>
+    </tr>
+    <tr>
+      <th>cgd4_3090-RA-p1</th>
+      <td>-1380.664182</td>
+      <td>0.00000</td>
+      <td>Oocyst wall protein 6</td>
+      <td>0.999096</td>
+    </tr>
+    <tr>
+      <th>cgd6_3820-RA-p1</th>
+      <td>-1360.733092</td>
+      <td>0.00000</td>
+      <td>Aspartic peptidase A1 family</td>
+      <td>0.970210</td>
+    </tr>
+    <tr>
+      <th>cgd7_180-RA-p1</th>
+      <td>-1197.806639</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.981498</td>
+    </tr>
+    <tr>
+      <th>cgd5_3073-RA-p1</th>
+      <td>-1162.563739</td>
+      <td>0.00000</td>
+      <td>Carboxylic ester hydrolase</td>
+      <td>0.345732</td>
+    </tr>
+    <tr>
+      <th>cgd1_370-RA-p1</th>
+      <td>-1152.804351</td>
+      <td>0.00000</td>
+      <td>carboxypeptidase A with signal peptide region</td>
+      <td>0.164825</td>
+    </tr>
+    <tr>
+      <th>cgd7_3110-RA-p1</th>
+      <td>-1110.358219</td>
+      <td>0.00000</td>
+      <td>S1/P1 nuclease</td>
+      <td>0.950841</td>
+    </tr>
+    <tr>
+      <th>cgd3_1540-RA-p1</th>
+      <td>-1009.507230</td>
+      <td>0.00000</td>
+      <td>Signal peptide containing protein</td>
+      <td>0.978553</td>
+    </tr>
+    <tr>
+      <th>cgd7_4560-RA-p1</th>
+      <td>-981.850702</td>
+      <td>0.00000</td>
+      <td>Sushi/SCR/CCP/SbsA/lg-like domain containing p...</td>
+      <td>0.811518</td>
+    </tr>
+    <tr>
+      <th>cgd7_400-RA-p1</th>
+      <td>-972.916857</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.925396</td>
+    </tr>
+    <tr>
+      <th>cgd6_2900-RA-p1</th>
+      <td>-953.998924</td>
+      <td>0.00000</td>
+      <td>Exostosin-like protein</td>
+      <td>0.001078</td>
+    </tr>
+    <tr>
+      <th>cgd1_3550-RA-p1</th>
+      <td>-945.771854</td>
+      <td>0.00000</td>
+      <td>Apple domain containing protein</td>
+      <td>0.001928</td>
+    </tr>
+    <tr>
+      <th>cgd6_4840-RA-p1</th>
+      <td>-924.924480</td>
+      <td>0.00000</td>
+      <td>Serine protease, subtilase family, signal peptide</td>
+      <td>0.744158</td>
+    </tr>
+    <tr>
+      <th>cgd8_5090-RA-p1</th>
+      <td>-920.270888</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.000475</td>
+    </tr>
+    <tr>
+      <th>cgd6_1450-RA-p1</th>
+      <td>-908.381851</td>
+      <td>0.00000</td>
+      <td>Polysaccharide pyruvyl transferase with Fringe...</td>
+      <td>0.825723</td>
+    </tr>
+    <tr>
+      <th>cgd7_2583-RA-p1</th>
+      <td>-837.825486</td>
+      <td>0.00000</td>
+      <td>Polysaccharide pyruvyl transferase</td>
+      <td>0.003773</td>
+    </tr>
+    <tr>
+      <th>cgd6_300-RA-p1</th>
+      <td>-781.510492</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.001128</td>
+    </tr>
+    <tr>
+      <th>cgd4_670-RA-p1</th>
+      <td>-768.530701</td>
+      <td>0.00000</td>
+      <td>Oocyst wall protein 3</td>
+      <td>0.985217</td>
+    </tr>
+    <tr>
+      <th>cgd2_3780-RA-p1</th>
+      <td>-691.560064</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.984378</td>
+    </tr>
+    <tr>
+      <th>cgd6_4440-RA-p1</th>
+      <td>-691.322538</td>
+      <td>0.00000</td>
+      <td>Uncharacterized protein</td>
+      <td>0.000378</td>
+    </tr>
+    <tr>
+      <th>cgd4_500-RA-p1</th>
+      <td>-649.403128</td>
+      <td>0.00020</td>
+      <td>Oocyst wall protein 7</td>
+      <td>0.568969</td>
+    </tr>
+    <tr>
+      <th>cgd3_1220-RA-p1</th>
+      <td>-640.148370</td>
+      <td>0.00020</td>
+      <td>Hyaluronan/mRNA-binding protein</td>
+      <td>0.002407</td>
+    </tr>
+    <tr>
+      <th>cgd2_850-RA-p1</th>
+      <td>-632.055534</td>
+      <td>0.00020</td>
+      <td>Uncharacterized protein</td>
+      <td>0.544608</td>
+    </tr>
+    <tr>
+      <th>cgd7_5150-RA-p1</th>
+      <td>-614.423253</td>
+      <td>0.00020</td>
+      <td>Chitin-binding type-2 domain containing protein</td>
+      <td>0.985015</td>
+    </tr>
+    <tr>
+      <th>cgd1_800-RA-p1</th>
+      <td>-584.427844</td>
+      <td>0.00020</td>
+      <td>Protein disulfide isomerase</td>
+      <td>0.752807</td>
+    </tr>
+    <tr>
+      <th>cgd2_3320-RA-p1</th>
+      <td>-571.688380</td>
+      <td>0.00034</td>
+      <td>Papain family cysteine protease</td>
+      <td>0.822804</td>
+    </tr>
+    <tr>
+      <th>cgd2_2120-RA-p1</th>
+      <td>-545.230798</td>
+      <td>0.00034</td>
+      <td>High mobility group box domain containing protein</td>
+      <td>0.000366</td>
+    </tr>
+    <tr>
+      <th>cgd3_440-RA-p1</th>
+      <td>-523.278818</td>
+      <td>0.00034</td>
+      <td>C-type lectin containing protein</td>
+      <td>0.001844</td>
+    </tr>
+    <tr>
+      <th>cgd8_600-RA-p1</th>
+      <td>-514.291695</td>
+      <td>0.00034</td>
+      <td>Serine aminopeptidase, S33</td>
+      <td>0.468104</td>
+    </tr>
+    <tr>
+      <th>cgd1_3560-RA-p1</th>
+      <td>-510.424484</td>
+      <td>0.00034</td>
+      <td>Uncharacterized protein</td>
+      <td>0.000253</td>
+    </tr>
+    <tr>
+      <th>cgd8_3330-RA-p1</th>
+      <td>-486.864164</td>
+      <td>0.00034</td>
+      <td>Translation initiation factor 1A</td>
+      <td>0.002047</td>
+    </tr>
+    <tr>
+      <th>cgd5_4230-RA-p1</th>
+      <td>-477.176618</td>
+      <td>0.00043</td>
+      <td>EGF-like domain containing protein</td>
+      <td>0.569876</td>
+    </tr>
+    <tr>
+      <th>cgd8_2800-RA-p1</th>
+      <td>-436.406069</td>
+      <td>0.00082</td>
+      <td>Signal peptide LNR (Lin-12/Notch) repeat conta...</td>
+      <td>0.906944</td>
+    </tr>
+    <tr>
+      <th>cgd8_3350-RA-p1</th>
+      <td>-420.524065</td>
+      <td>0.00082</td>
+      <td>Oocyst wall protein 4</td>
+      <td>0.958276</td>
+    </tr>
+    <tr>
+      <th>cgd6_1990-RA-p1</th>
+      <td>-413.759047</td>
+      <td>0.00082</td>
+      <td>Uncharacterized protein</td>
+      <td>0.280295</td>
+    </tr>
+    <tr>
+      <th>cgd4_3550-RA-p1</th>
+      <td>-388.507467</td>
+      <td>0.00115</td>
+      <td>Secreted Kazal domain-containing protein</td>
+      <td>0.859054</td>
+    </tr>
+    <tr>
+      <th>cgd3_3700-RA-p1</th>
+      <td>-380.695372</td>
+      <td>0.00127</td>
+      <td>Uncharacterized protein</td>
+      <td>0.369615</td>
+    </tr>
+    <tr>
+      <th>cgd2_3050-RA-p1</th>
+      <td>-362.670033</td>
+      <td>0.00160</td>
+      <td>Uncharacterized protein</td>
+      <td>0.001329</td>
+    </tr>
+    <tr>
+      <th>cgd1_3690-RA-p1</th>
+      <td>-330.626816</td>
+      <td>0.00169</td>
+      <td>Aspartyl (Acid) protease</td>
+      <td>0.749995</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;final.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html_toc analysis.ipynb
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] Converting notebook analysis.ipynb to html_toc
+[NbConvertApp] Support files will be in analysis_files/
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Writing 474964 bytes to analysis.html
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
