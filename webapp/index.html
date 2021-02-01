@@ -107,7 +107,13 @@
         "visible": false, "searchable": true},
 
         {"targets": columns.indexOf('Gene_id') , 
-        "searchable": false },
+        "searchable": false, 
+        "render": function ( data, type, row ) {
+                  data = data.replace('-RA-p1', '');
+                  return data ;
+                }
+        },
+        
 
         {"targets": columns.indexOf('Desc'), 
         "searchable": true },
@@ -128,7 +134,7 @@
       //start the datatable
       var table = $('#table').DataTable(
         {
-          "dom": 'frtipB',
+          "dom": 'lfrtipB',
           "buttons": ['csv'],
           "search": {"regex": true},
           "lengthMenu": [[-1, 5, 10, 20, 25, 50, 100 ], 

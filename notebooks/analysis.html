@@ -13669,7 +13669,7 @@ Removing protein with high homology to Cow proteins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
@@ -13727,7 +13727,7 @@ Removing protein with high homology to Cow proteins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sporo_nan_1</span> <span class="o">=</span> <span class="n">selection</span><span class="p">[[</span><span class="s1">&#39;SPORO_1&#39;</span><span class="p">,</span><span class="s1">&#39;SPORO_2&#39;</span><span class="p">,</span><span class="s1">&#39;SPORO_3&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -13771,7 +13771,7 @@ Removing protein with high homology to Cow proteins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_cv</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -13807,13 +13807,13 @@ Removing protein with high homology to Cow proteins
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11d2c9d30&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x123856400&gt;</pre>
 </div>
 
 </div>
@@ -13845,7 +13845,7 @@ Removing protein with high homology to Cow proteins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#selection</span>
@@ -13858,7 +13858,7 @@ Removing protein with high homology to Cow proteins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">indata_prank</span> <span class="o">=</span> <span class="n">selection</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -13875,7 +13875,7 @@ Removing protein with high homology to Cow proteins
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -13965,7 +13965,7 @@ Removing protein with high homology to Cow proteins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#indata_prank = selection[[&#39;SPORO1&#39;, &#39;SPORO2&#39;, &#39;SPORO3&#39;,  &#39;WALL1&#39;, &#39;WALL2&#39;, &#39;WALL3&#39;]]</span>
@@ -13987,7 +13987,7 @@ Removing protein with high homology to Cow proteins
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -14086,7 +14086,7 @@ Removing protein with high homology to Cow proteins
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">what_to_compare</span> <span class="o">=</span> <span class="p">[[[</span><span class="s1">&#39;SPORO_1&#39;</span><span class="p">,</span> <span class="s1">&#39;WALL_1&#39;</span> <span class="p">],</span> <span class="p">[</span><span class="s1">&#39;SPORO_2&#39;</span><span class="p">,</span> <span class="s1">&#39;WALL_2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;SPORO_3&#39;</span><span class="p">,</span> <span class="s1">&#39;WALL_3&#39;</span> <span class="p">]]]</span>
@@ -14142,7 +14142,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#get back the results from protrank</span>
@@ -14169,7 +14169,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">out_all</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;rank&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -14185,7 +14185,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14300,7 +14300,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">out_all</span><span class="p">[</span><span class="s1">&#39;log_sum&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">indata_prank</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
@@ -14315,7 +14315,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#the protein that have been localized</span>
@@ -14346,7 +14346,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">out_all</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14362,7 +14362,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -14477,7 +14477,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#ax.spines[&#39;left&#39;].set_bounds(ymin+small_add, ymax)</span>
@@ -14642,7 +14642,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
@@ -14680,7 +14680,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
@@ -14697,7 +14697,7 @@ no selection
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -14732,7 +14732,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">signalP</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../CryptoDB-45_CparvumIowaII_AnnotatedProteins_summary.signalp5&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -14746,7 +14746,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">phobius</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../CryptoDB-45_CparvumIowaII_AnnotatedProteins.fasta.phobius.out&#39;</span><span class="p">,</span>
@@ -14762,7 +14762,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">phobius</span><span class="p">)</span>
@@ -14775,7 +14775,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[[</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span><span class="s1">&#39;FDR&#39;</span><span class="p">,</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;SP(Sec/SPI)&#39;</span><span class="p">,</span><span class="s1">&#39;TM&#39;</span><span class="p">,</span><span class="s1">&#39;PREDICTION&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14791,7 +14791,7 @@ no selection
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14926,7 +14926,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Visualise Selected Proteins</span>
@@ -14939,13 +14939,14 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#tag =&#39;Intensity&#39;</span>
 <span class="n">tag</span> <span class="o">=</span><span class="s1">&#39;iBAQ&#39;</span>
 <span class="c1">#tag =&#39;LFQ intensity&#39;</span>
 <span class="k">def</span> <span class="nf">plot_prot</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span><span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">tag</span><span class="o">=</span><span class="s1">&#39;LFQ intensity&#39;</span><span class="p">,</span><span class="n">desc_dict</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
     <span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39; SPORO_1&#39;</span><span class="p">,</span><span class="s1">&#39; SPORO_2&#39;</span><span class="p">,</span><span class="s1">&#39; SPORO_3&#39;</span><span class="p">,</span> <span class="s1">&#39; WALL_1&#39;</span><span class="p">,</span> <span class="s1">&#39; WALL_2&#39;</span><span class="p">,</span><span class="s1">&#39; WALL_3&#39;</span><span class="p">]</span>
     <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">tag</span><span class="o">+</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">]</span>
     <span class="n">temp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Fasta headers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">gene</span><span class="p">)][</span><span class="n">cols</span><span class="p">]</span>
@@ -14955,7 +14956,7 @@ no selection
     <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">temp</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span><span class="c1">#.plot(kind=&#39;bar&#39;,color=palette)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">gene</span> <span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span><span class="n">desc_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span><span class="s1">&#39;none&#39;</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">gene</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-RA-p1&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;: &#39;</span><span class="o">+</span><span class="n">desc_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span><span class="s1">&#39;none&#39;</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">gene</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -14970,7 +14971,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">protein</span> <span class="ow">in</span> <span class="n">_ids</span><span class="p">:</span>
@@ -15201,7 +15202,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">selection</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -15217,7 +15218,7 @@ no selection
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -15247,7 +15248,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#save finala dataset</span>
@@ -15261,7 +15262,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#web app dataset</span>
@@ -15282,7 +15283,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html_toc analysis.ipynb
@@ -15325,7 +15326,7 @@ no selection
 [NbConvertApp] Making directory analysis_files
 [NbConvertApp] Making directory analysis_files
 [NbConvertApp] Making directory analysis_files
-[NbConvertApp] Writing 385835 bytes to analysis.html
+[NbConvertApp] Writing 376507 bytes to analysis.html
 </pre>
 </div>
 </div>
@@ -15336,7 +15337,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#viz</span>
@@ -15349,7 +15350,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!ls -l ../webapp/</span>
