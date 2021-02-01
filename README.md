@@ -16,7 +16,3 @@
 ## *Project Desc*
     
 ![title](https://github.com/mtinti/oocyst_wall_proteome/blob/main/notebooks/FigX.png)
-
-
-![title](https://github.com/mtinti/oocyst_wall_proteome/blob/main/example.svg)
-
