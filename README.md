@@ -1,4 +1,4 @@
-![title](https://github.com/mtinti/oocyst_wall_proteome/blob/master/static/wcar.png)
+![title](https://github.com/mtinti/oocyst_wall_proteome/blob/main/static/wcar.png)
 # Oocyst Wall Proteome
 
 [![Binder](binder placeholder)
@@ -12,5 +12,7 @@
 
     Wellcome Centre for Anti-Infectives Research
     School of Life Sciences, University of Dundee
+
+## *Project Desc*
     
-![title](https://github.com/mtinti/oocyst_wall_proteome/blob/master/notebooks/FigX.png)
+![title](https://github.com/mtinti/oocyst_wall_proteome/blob/main/notebooks/FigX.png)
