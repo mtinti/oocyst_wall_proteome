@@ -15219,18 +15219,12 @@ no selection
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Save-data-for-webapp">Save data for webapp<a class="anchor-link" href="#Save-data-for-webapp">&#182;</a></h2>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15253,27 +15247,22 @@ no selection
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#viz</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Add-InParanoid-info">Add InParanoid info<a class="anchor-link" href="#Add-InParanoid-info">&#182;</a></h2>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[137]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
 <span class="n">t_gondii</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../InParanoid.C.parvum-T.gondii/C.parvum-T.gondii.orthoXML.xml&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
 <span class="n">p_falciparum</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../InParanoid.C.parvum-P.falciparum/C.parvum-P.falciparum.orthoXML.xml&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+<span class="n">n_caninum</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../InParanoid.C.parvum-N.caninum/C.parvum-N.caninum.orthoXML&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -15386,13 +15375,68 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_caninum_ortho</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">species</span> <span class="ow">in</span> <span class="n">n_caninum</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">species</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">species</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
+    <span class="k">if</span>  <span class="p">(</span> <span class="p">(</span><span class="n">species</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span> <span class="s1">&#39;{http://orthoXML.org/2011/}species&#39;</span><span class="p">)</span>
+    <span class="ow">and</span> <span class="p">(</span><span class="n">species</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Cryptosporidium parvum &#39;</span><span class="p">)</span> <span class="p">):</span>
+        <span class="k">for</span> <span class="n">database</span> <span class="ow">in</span> <span class="n">species</span><span class="p">:</span>
+            <span class="c1">#print(database.tag, database.attrib)</span>
+            <span class="k">for</span> <span class="n">genes</span> <span class="ow">in</span> <span class="n">database</span><span class="p">:</span>
+                <span class="c1">#print(&#39;genes&#39;,genes.tag, genes.attrib)</span>
+                <span class="k">for</span> <span class="n">gene</span> <span class="ow">in</span> <span class="n">genes</span><span class="p">:</span>
+                    <span class="c1">#print(&#39;genes&#39;,gene.tag, gene.attrib)</span>
+                    <span class="k">if</span> <span class="n">gene</span><span class="o">.</span><span class="n">tag</span> <span class="o">==</span><span class="s1">&#39;{http://orthoXML.org/2011/}gene&#39;</span><span class="p">:</span>
+                        <span class="c1">#print(gene.tag, gene.attrib[&#39;geneId&#39;])</span>
+                        <span class="n">n_caninum_ortho</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gene</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;geneId&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">n_caninum_ortho</span><span class="p">))</span>
+<span class="n">n_caninum_ortho</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">n_caninum_ortho</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">n_caninum_ortho</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{http://orthoXML.org/2011/}notes {}
+{http://orthoXML.org/2011/}species {&#39;name&#39;: &#39;Cryptosporidium parvum &#39;, &#39;NCBITaxId&#39;: &#39;353152&#39;}
+{http://orthoXML.org/2011/}species {&#39;name&#39;: &#39;Neospora caninum &#39;, &#39;NCBITaxId&#39;: &#39;572307&#39;}
+{http://orthoXML.org/2011/}scores {}
+{http://orthoXML.org/2011/}groups {}
+1403
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[140]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-RA-p1&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> 
                            <span class="ow">in</span> <span class="n">t_gondii_ortho</span> <span class="k">else</span> <span class="kc">False</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">final</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
 <span class="n">final</span><span class="p">[</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-RA-p1&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
                                <span class="ow">in</span> <span class="n">p_falciparum_ortho</span> <span class="k">else</span> <span class="kc">False</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">final</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">final</span><span class="p">[</span><span class="s1">&#39;n_caninum_ortho&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-RA-p1&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+                               <span class="ow">in</span> <span class="n">n_caninum_ortho</span> <span class="k">else</span> <span class="kc">False</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">final</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -15402,7 +15446,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15418,7 +15462,7 @@ no selection
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[126]:</div>
+    <div class="prompt output_prompt">Out[141]:</div>
 
 
 
@@ -15437,7 +15481,7 @@ Name: t_gondii_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15453,7 +15497,7 @@ Name: t_gondii_ortho, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[127]:</div>
+    <div class="prompt output_prompt">Out[142]:</div>
 
 
 
@@ -15462,6 +15506,41 @@ Name: t_gondii_ortho, dtype: int64</pre>
 <pre>False    865
 True     794
 Name: p_falciparum_ortho, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[143]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;n_caninum_ortho&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[143]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True     836
+False    823
+Name: n_caninum_ortho, dtype: int64</pre>
 </div>
 
 </div>
@@ -15595,7 +15674,164 @@ Name: p_falciparum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="n">final</span><span class="p">[(</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;srank&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span> 
+                  <span class="o">&amp;</span> <span class="p">(</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">]</span> <span class="o">|</span> <span class="n">final</span><span class="p">[</span><span class="s1">&#39;n_caninum_ortho&#39;</span><span class="p">])</span> 
+                  <span class="o">&amp;</span> <span class="o">~</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">]]</span>
+<span class="n">selection</span><span class="p">[[</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;srank&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[144]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>desc</th>
+      <th>srank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cgd7_5150-RA-p1</th>
+      <td>Chitin-binding type-2 domain containing protein</td>
+      <td>67.279057</td>
+    </tr>
+    <tr>
+      <th>cgd6_4840-RA-p1</th>
+      <td>Serine protease, subtilase family, signal peptide</td>
+      <td>65.097189</td>
+    </tr>
+    <tr>
+      <th>cgd4_3090-RA-p1</th>
+      <td>Oocyst wall protein 6</td>
+      <td>56.644123</td>
+    </tr>
+    <tr>
+      <th>cgd7_4560-RA-p1</th>
+      <td>Sushi/SCR/CCP/SbsA/lg-like domain containing p...</td>
+      <td>53.858537</td>
+    </tr>
+    <tr>
+      <th>cgd7_850-RA-p1</th>
+      <td>Patched family protein/Sterol-sensing domain-c...</td>
+      <td>52.503351</td>
+    </tr>
+    <tr>
+      <th>cgd6_2470-RA-p1</th>
+      <td>Sulfhydryl oxidase</td>
+      <td>46.831046</td>
+    </tr>
+    <tr>
+      <th>cgd2_2510-RA-p1</th>
+      <td>Glucose-methanol-choline oxidoreductase</td>
+      <td>34.095415</td>
+    </tr>
+    <tr>
+      <th>cgd6_670-RA-p1</th>
+      <td>Aspartic acid and asparagine hydroxylation/Pep...</td>
+      <td>26.321046</td>
+    </tr>
+    <tr>
+      <th>cgd5_3980-RA-p1</th>
+      <td>Uncharacterized protein</td>
+      <td>22.478554</td>
+    </tr>
+    <tr>
+      <th>cgd4_500-RA-p1</th>
+      <td>Oocyst wall protein 7</td>
+      <td>19.737609</td>
+    </tr>
+    <tr>
+      <th>cgd8_1220-RA-p1</th>
+      <td>Alpha/Beta hydrolase fold containing protein</td>
+      <td>12.208072</td>
+    </tr>
+    <tr>
+      <th>cgd4_3550-RA-p1</th>
+      <td>Secreted Kazal domain-containing protein</td>
+      <td>11.857639</td>
+    </tr>
+    <tr>
+      <th>cgd5_3420-RA-p1</th>
+      <td>TSP1/LNR (Lin-12/Notch) repeat containing protein</td>
+      <td>11.149744</td>
+    </tr>
+    <tr>
+      <th>cgd3_3430-RA-p1</th>
+      <td>Amine oxidase</td>
+      <td>8.824921</td>
+    </tr>
+    <tr>
+      <th>cgd1_3690-RA-p1</th>
+      <td>Aspartyl (Acid) protease</td>
+      <td>6.713669</td>
+    </tr>
+    <tr>
+      <th>cgd7_400-RA-p1</th>
+      <td>Uncharacterized protein</td>
+      <td>5.734593</td>
+    </tr>
+    <tr>
+      <th>cgd3_2320-RA-p1</th>
+      <td>cGMP phosphodiesterase A4</td>
+      <td>5.585467</td>
+    </tr>
+    <tr>
+      <th>cgd7_3500-RA-p1</th>
+      <td>Leo1-like protein</td>
+      <td>5.301898</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Save-dataset-and-nootebook">Save dataset and nootebook<a class="anchor-link" href="#Save-dataset-and-nootebook">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#save finala dataset</span>
@@ -15609,10 +15845,64 @@ Name: p_falciparum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[136]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html_toc analysis.ipynb
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] Converting notebook analysis.ipynb to html_toc
+[NbConvertApp] Support files will be in analysis_files/
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Making directory analysis_files
+[NbConvertApp] Writing 390328 bytes to analysis.html
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
