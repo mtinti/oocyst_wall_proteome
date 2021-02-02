@@ -15674,13 +15674,15 @@ Name: n_caninum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="n">final</span><span class="p">[(</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;srank&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span> 
                   <span class="o">&amp;</span> <span class="p">(</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">]</span> <span class="o">|</span> <span class="n">final</span><span class="p">[</span><span class="s1">&#39;n_caninum_ortho&#39;</span><span class="p">])</span> 
                   <span class="o">&amp;</span> <span class="o">~</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">]]</span>
-<span class="n">selection</span><span class="p">[[</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;srank&#39;</span><span class="p">]]</span>
+<span class="n">selection</span><span class="p">[[</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">,</span><span class="s1">&#39;n_caninum_ortho&#39;</span><span class="p">,</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;SP(Sec/SPI)&#39;</span><span class="p">,</span><span class="s1">&#39;TM&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15693,129 +15695,43 @@ Name: n_caninum_ortho, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[144]:</div>
+    <div class="prompt"></div>
 
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-147-b2bd5e7e24dc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span>                   <span class="ansi-blue-fg">&amp;</span> <span class="ansi-blue-fg">(</span>final<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;t_gondii_ortho&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">|</span> final<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;n_caninum_ortho&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                   &amp; ~final[&#39;p_falciparum_ortho&#39;]]
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> selection[[&#39;desc&#39;,&#39;srank&#39;,
+</span><span class="ansi-green-intense-fg ansi-bold">      5</span>            <span class="ansi-blue-fg">&#39;t_gondii_ortho&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;n_caninum_ortho&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;p_falciparum_ortho&#39;</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>           &#39;SP(Sec/SPI)&#39;,&#39;TM&#39;]].to_csv(&#39;&#39;)
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<span class="ansi-green-fg">~/miniconda3/envs/mixRP/lib/python3.8/site-packages/pandas/core/generic.py</span> in <span class="ansi-cyan-fg">to_csv</span><span class="ansi-blue-fg">(self, path_or_buf, sep, na_rep, float_format, columns, header, index, index_label, mode, encoding, compression, quoting, quotechar, line_terminator, chunksize, date_format, doublequote, escapechar, decimal)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3202</span>             decimal<span class="ansi-blue-fg">=</span>decimal<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   3203</span>         )
+<span class="ansi-green-fg">-&gt; 3204</span><span class="ansi-red-fg">         </span>formatter<span class="ansi-blue-fg">.</span>save<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3205</span> 
+<span class="ansi-green-intense-fg ansi-bold">   3206</span>         <span class="ansi-green-fg">if</span> path_or_buf <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="ansi-green-fg">~/miniconda3/envs/mixRP/lib/python3.8/site-packages/pandas/io/formats/csvs.py</span> in <span class="ansi-cyan-fg">save</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    182</span>             close <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span>
+<span class="ansi-green-intense-fg ansi-bold">    183</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 184</span><span class="ansi-red-fg">             f, handles = get_handle(
+</span><span class="ansi-green-intense-fg ansi-bold">    185</span>                 self<span class="ansi-blue-fg">.</span>path_or_buf<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    186</span>                 self<span class="ansi-blue-fg">.</span>mode<span class="ansi-blue-fg">,</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>desc</th>
-      <th>srank</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>cgd7_5150-RA-p1</th>
-      <td>Chitin-binding type-2 domain containing protein</td>
-      <td>67.279057</td>
-    </tr>
-    <tr>
-      <th>cgd6_4840-RA-p1</th>
-      <td>Serine protease, subtilase family, signal peptide</td>
-      <td>65.097189</td>
-    </tr>
-    <tr>
-      <th>cgd4_3090-RA-p1</th>
-      <td>Oocyst wall protein 6</td>
-      <td>56.644123</td>
-    </tr>
-    <tr>
-      <th>cgd7_4560-RA-p1</th>
-      <td>Sushi/SCR/CCP/SbsA/lg-like domain containing p...</td>
-      <td>53.858537</td>
-    </tr>
-    <tr>
-      <th>cgd7_850-RA-p1</th>
-      <td>Patched family protein/Sterol-sensing domain-c...</td>
-      <td>52.503351</td>
-    </tr>
-    <tr>
-      <th>cgd6_2470-RA-p1</th>
-      <td>Sulfhydryl oxidase</td>
-      <td>46.831046</td>
-    </tr>
-    <tr>
-      <th>cgd2_2510-RA-p1</th>
-      <td>Glucose-methanol-choline oxidoreductase</td>
-      <td>34.095415</td>
-    </tr>
-    <tr>
-      <th>cgd6_670-RA-p1</th>
-      <td>Aspartic acid and asparagine hydroxylation/Pep...</td>
-      <td>26.321046</td>
-    </tr>
-    <tr>
-      <th>cgd5_3980-RA-p1</th>
-      <td>Uncharacterized protein</td>
-      <td>22.478554</td>
-    </tr>
-    <tr>
-      <th>cgd4_500-RA-p1</th>
-      <td>Oocyst wall protein 7</td>
-      <td>19.737609</td>
-    </tr>
-    <tr>
-      <th>cgd8_1220-RA-p1</th>
-      <td>Alpha/Beta hydrolase fold containing protein</td>
-      <td>12.208072</td>
-    </tr>
-    <tr>
-      <th>cgd4_3550-RA-p1</th>
-      <td>Secreted Kazal domain-containing protein</td>
-      <td>11.857639</td>
-    </tr>
-    <tr>
-      <th>cgd5_3420-RA-p1</th>
-      <td>TSP1/LNR (Lin-12/Notch) repeat containing protein</td>
-      <td>11.149744</td>
-    </tr>
-    <tr>
-      <th>cgd3_3430-RA-p1</th>
-      <td>Amine oxidase</td>
-      <td>8.824921</td>
-    </tr>
-    <tr>
-      <th>cgd1_3690-RA-p1</th>
-      <td>Aspartyl (Acid) protease</td>
-      <td>6.713669</td>
-    </tr>
-    <tr>
-      <th>cgd7_400-RA-p1</th>
-      <td>Uncharacterized protein</td>
-      <td>5.734593</td>
-    </tr>
-    <tr>
-      <th>cgd3_2320-RA-p1</th>
-      <td>cGMP phosphodiesterase A4</td>
-      <td>5.585467</td>
-    </tr>
-    <tr>
-      <th>cgd7_3500-RA-p1</th>
-      <td>Leo1-like protein</td>
-      <td>5.301898</td>
-    </tr>
-  </tbody>
-</table>
+<span class="ansi-green-fg">~/miniconda3/envs/mixRP/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-fg">(path_or_buf, mode, encoding, compression, memory_map, is_text)</span>
+<span class="ansi-green-intense-fg ansi-bold">    426</span>         <span class="ansi-green-fg">if</span> encoding<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    427</span>             <span class="ansi-red-fg"># Encoding</span>
+<span class="ansi-green-fg">--&gt; 428</span><span class="ansi-red-fg">             </span>f <span class="ansi-blue-fg">=</span> open<span class="ansi-blue-fg">(</span>path_or_buf<span class="ansi-blue-fg">,</span> mode<span class="ansi-blue-fg">,</span> encoding<span class="ansi-blue-fg">=</span>encoding<span class="ansi-blue-fg">,</span> newline<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    429</span>         <span class="ansi-green-fg">elif</span> is_text<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    430</span>             <span class="ansi-red-fg"># No explicit encoding</span>
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;&#39;</pre>
 </div>
-</div>
-
 </div>
 
 </div>
@@ -15845,7 +15761,7 @@ Name: n_caninum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html_toc analysis.ipynb
@@ -15888,7 +15804,7 @@ Name: n_caninum_ortho, dtype: int64</pre>
 [NbConvertApp] Making directory analysis_files
 [NbConvertApp] Making directory analysis_files
 [NbConvertApp] Making directory analysis_files
-[NbConvertApp] Writing 390328 bytes to analysis.html
+[NbConvertApp] Writing 402478 bytes to analysis.html
 </pre>
 </div>
 </div>
