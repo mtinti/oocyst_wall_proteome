@@ -15,4 +15,6 @@
 
 ## *Project Desc*
     
-![title](https://github.com/mtinti/oocyst_wall_proteome/blob/main/notebooks/FigX.png)
+![differential_expresion](https://github.com/mtinti/oocyst_wall_proteome/blob/main/notebooks/FigX.png)
+
+![COWP-1](https://github.com/mtinti/oocyst_wall_proteome/blob/main/notebooks/cgd6_2090-RA-p1.png)
