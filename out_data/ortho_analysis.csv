@@ -1,0 +1,19 @@
+,desc,srank,t_gondii_ortho,n_caninum_ortho,p_falciparum_ortho,SP(Sec/SPI),TM
+cgd7_5150-RA-p1,Chitin-binding type-2 domain containing protein,67.279057,True,True,False,0.985015,0
+cgd6_4840-RA-p1,"Serine protease, subtilase family, signal peptide",65.097189,True,False,False,0.744158,0
+cgd4_3090-RA-p1,Oocyst wall protein 6,56.644123,True,True,False,0.9990959999999999,0
+cgd7_4560-RA-p1,Sushi/SCR/CCP/SbsA/lg-like domain containing protein,53.858537,True,True,False,0.8115180000000001,2
+cgd7_850-RA-p1,Patched family protein/Sterol-sensing domain-containing protein,52.503351,True,True,False,0.0024980000000000002,11
+cgd6_2470-RA-p1,Sulfhydryl oxidase,46.831046,False,True,False,0.000349,2
+cgd2_2510-RA-p1,Glucose-methanol-choline oxidoreductase,34.095415,True,True,False,0.8539329999999999,0
+cgd6_670-RA-p1,"Aspartic acid and asparagine hydroxylation/Peptidase C11, clostripain domain contining protein",26.321046000000003,False,True,False,0.496705,2
+cgd5_3980-RA-p1,Uncharacterized protein,22.478554000000003,False,True,False,0.0012380000000000002,1
+cgd4_500-RA-p1,Oocyst wall protein 7,19.737609,True,True,False,0.568969,0
+cgd8_1220-RA-p1,Alpha/Beta hydrolase fold containing protein,12.208072,False,True,False,0.001628,0
+cgd4_3550-RA-p1,Secreted Kazal domain-containing protein,11.857639,True,True,False,0.8590540000000001,0
+cgd5_3420-RA-p1,TSP1/LNR (Lin-12/Notch) repeat containing protein,11.149744,True,True,False,0.990667,1
+cgd3_3430-RA-p1,Amine oxidase,8.824921,True,True,False,0.9655729999999999,0
+cgd1_3690-RA-p1,Aspartyl (Acid) protease,6.713669,True,True,False,0.749995,1
+cgd7_400-RA-p1,Uncharacterized protein,5.734593,True,False,False,0.9253959999999999,0
+cgd3_2320-RA-p1,cGMP phosphodiesterase A4,5.5854669999999995,False,True,False,0.000491,6
+cgd7_3500-RA-p1,Leo1-like protein,5.301898,True,False,False,0.002091,0

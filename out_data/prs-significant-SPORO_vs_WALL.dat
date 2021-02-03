@@ -1,0 +1,17 @@
+# list of 16 proteins with FDR <= 0.1 (FDR values computed using 100 bootstrap realizations of the data)
+cgd1_800-RA-p1
+cgd7_5150-RA-p1
+cgd6_4840-RA-p1
+cgd6_2090-RA-p1
+cgd4_3090-RA-p1
+cgd8_600-RA-p1
+cgd7_4560-RA-p1
+cgd7_850-RA-p1
+cgd6_200-RA-p1
+cgd3_190-RA-p1
+cgd6_2470-RA-p1
+cgd8_5090-RA-p1
+cgd3_3700-RA-p1
+cgd6_300-RA-p1
+cgd2_3320-RA-p1
+cgd2_2510-RA-p1
