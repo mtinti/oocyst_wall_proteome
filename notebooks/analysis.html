@@ -13172,7 +13172,7 @@ School of Life Sciences, University of Dundee
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../indata/proteinGroups.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../in_data/proteinGroups.txt&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">PTUT</span><span class="o">.</span><span class="n">clean_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">unique_pep_threshold</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">PTUT</span><span class="o">.</span><span class="n">mod_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -13544,7 +13544,7 @@ Removing protein with high homology to Cow proteins
             <span class="n">showfliers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="n">palette</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Value Distribution&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Log10 Intensity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;../value_distribution.png&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;../out_data/value_distribution.png&#39;</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -13594,7 +13594,7 @@ Removing protein with high homology to Cow proteins
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Missing Data Analysis&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Fraction of data points&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;missing.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../out_data/missing.png&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -13813,7 +13813,7 @@ Removing protein with high homology to Cow proteins
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x123856400&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x127bd5820&gt;</pre>
 </div>
 
 </div>
@@ -13973,7 +13973,7 @@ Removing protein with high homology to Cow proteins
 <span class="c1">#indata_prank=indata_prank.fillna(indata_prank.min())</span>
 <span class="n">indata_prank</span><span class="o">=</span><span class="n">indata_prank</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Gene_id&#39;</span><span class="p">]],</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
 <span class="n">indata_prank</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Gene_id&#39;</span><span class="p">,</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">indata_prank</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../indata_ProtRank.csv&#39;</span><span class="p">)</span>
+<span class="n">indata_prank</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../out_data/out_ProtRank.csv&#39;</span><span class="p">)</span>
 <span class="n">indata_prank</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -14093,7 +14093,7 @@ Removing protein with high homology to Cow proteins
 <span class="n">ProtRank</span><span class="o">.</span><span class="n">data_stats</span><span class="p">(</span><span class="n">indata_prank</span><span class="p">,</span> <span class="n">what_to_compare</span> <span class="o">=</span> <span class="n">what_to_compare</span><span class="p">,</span> <span class="n">ignore_missed</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;SPORO_vs_WALL&#39;</span>
 <span class="n">significant_proteins</span> <span class="o">=</span> <span class="n">ProtRank</span><span class="o">.</span><span class="n">rank_proteins</span><span class="p">(</span><span class="n">indata_prank</span><span class="p">,</span> <span class="n">what_to_compare</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span>
-                                              <span class="n">path_to</span><span class="o">=</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
+                                              <span class="n">path_to</span><span class="o">=</span><span class="s1">&#39;../out_data/&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14146,7 +14146,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#get back the results from protrank</span>
-<span class="k">def</span> <span class="nf">parse_prank</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s1">&#39;../prs-SPORO_vs_WALL.dat&#39;</span><span class="p">,</span><span class="n">desc_dict</span><span class="o">=</span><span class="n">desc_dict</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">parse_prank</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s1">&#39;../out_data/prs-SPORO_vs_WALL.dat&#39;</span><span class="p">,</span><span class="n">desc_dict</span><span class="o">=</span><span class="n">desc_dict</span><span class="p">):</span>
     <span class="n">temp_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fname</span><span class="p">),</span>
                        <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
                        <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;rank&#39;</span><span class="p">,</span><span class="s1">&#39;FDR&#39;</span><span class="p">,</span><span class="s1">&#39;sign&#39;</span><span class="p">])</span>
@@ -14156,7 +14156,7 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
     <span class="n">temp_1</span><span class="p">[</span><span class="s1">&#39;desc&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="n">desc_dict</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">temp_1</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
     <span class="c1">#temp_1.plot(kind=&#39;scatter&#39;,x=&#39;srank&#39;,y=&#39;log_FDR&#39;,marker=&#39;.&#39;)</span>
     <span class="c1">#print(fname+&#39;prank_outo.csv&#39;)</span>
-    <span class="n">temp_1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">fname</span><span class="o">+</span><span class="s1">&#39;prank_out.csv&#39;</span><span class="p">)</span>
+    <span class="n">temp_1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">fname</span><span class="o">+</span><span class="s1">&#39;_prank_out.csv&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">temp_1</span>
 
 <span class="n">out_all</span> <span class="o">=</span> <span class="n">parse_prank</span><span class="p">()</span>    
@@ -14281,19 +14281,6 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -14566,9 +14553,9 @@ SPORO_vs_WALL: there are 16 proteins that have FDR 0.1 or less
 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;FigX.svg&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../out_data/FigX.svg&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;FigX.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../out_data/FigX.png&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -14623,7 +14610,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_34_3.png"
+<img src="analysis_files/analysis_33_3.png"
 >
 </div>
 
@@ -14670,7 +14657,7 @@ no selection
 <span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="p">[</span><span class="s2">&quot;yaxis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;SignedRank&quot;</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">&#39;oocyst vs sporozoite&#39;</span><span class="p">)</span>
 <span class="c1">#fig.show()</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;oocyst_vs_sporozoite.html&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;../out_data/oocyst_vs_sporozoite.html&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14684,7 +14671,7 @@ no selection
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
-<span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;oocyst_vs_sporozoite.html&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;../out_data/oocyst_vs_sporozoite.html&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14706,7 +14693,7 @@ no selection
 <iframe
     width="2000"
     height="600"
-    src="oocyst_vs_sporozoite.html"
+    src="../out_data/oocyst_vs_sporozoite.html"
     frameborder="0"
     allowfullscreen
 ></iframe>
@@ -14735,7 +14722,7 @@ no selection
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">signalP</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../CryptoDB-45_CparvumIowaII_AnnotatedProteins_summary.signalp5&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">signalP</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../in_data/CryptoDB-45_CparvumIowaII_AnnotatedProteins_summary.signalp5&#39;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">final</span> <span class="o">=</span> <span class="n">out_all</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">signalP</span><span class="p">)</span>
 </pre></div>
 
@@ -14749,7 +14736,7 @@ no selection
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">phobius</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../CryptoDB-45_CparvumIowaII_AnnotatedProteins.fasta.phobius.out&#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">phobius</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../in_data/CryptoDB-45_CparvumIowaII_AnnotatedProteins.fasta.phobius.out&#39;</span><span class="p">,</span>
                       <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="c1">#phobius.columns = [&#39;TM&#39;,&#39;&#39;]</span>
 <span class="c1">#phobius.head()</span>
@@ -14788,7 +14775,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_selct</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span>
@@ -14806,7 +14793,7 @@ no selection
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14896,7 +14883,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#for n in [n.replace(&#39;-RA-p1&#39;,&#39;&#39;) for n in final.sort_values(&#39;srank&#39;,ascending=False).index.values][0:100]:</span>
@@ -14910,7 +14897,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#tag =&#39;Intensity&#39;</span>
@@ -14930,7 +14917,7 @@ no selection
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">gene</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-RA-p1&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;: &#39;</span><span class="o">+</span><span class="n">desc_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">gene</span><span class="p">,</span><span class="s1">&#39;none&#39;</span><span class="p">))</span>
     <span class="c1">#plt.xticks(rotation=45,ha=&#39;right&#39;)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">gene</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../out_data/&#39;</span><span class="o">+</span><span class="n">gene</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
     
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="c1">#print(desc_dict[gene])</span>
@@ -14944,7 +14931,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">protein</span> <span class="ow">in</span> <span class="n">_ids</span><span class="p">:</span>
@@ -14967,7 +14954,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_0.png"
+<img src="analysis_files/analysis_45_0.png"
 >
 </div>
 
@@ -14981,7 +14968,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_1.png"
+<img src="analysis_files/analysis_45_1.png"
 >
 </div>
 
@@ -14995,7 +14982,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_2.png"
+<img src="analysis_files/analysis_45_2.png"
 >
 </div>
 
@@ -15009,7 +14996,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_3.png"
+<img src="analysis_files/analysis_45_3.png"
 >
 </div>
 
@@ -15023,7 +15010,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_4.png"
+<img src="analysis_files/analysis_45_4.png"
 >
 </div>
 
@@ -15037,7 +15024,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_5.png"
+<img src="analysis_files/analysis_45_5.png"
 >
 </div>
 
@@ -15051,7 +15038,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_6.png"
+<img src="analysis_files/analysis_45_6.png"
 >
 </div>
 
@@ -15065,7 +15052,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_7.png"
+<img src="analysis_files/analysis_45_7.png"
 >
 </div>
 
@@ -15079,7 +15066,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_8.png"
+<img src="analysis_files/analysis_45_8.png"
 >
 </div>
 
@@ -15093,7 +15080,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_9.png"
+<img src="analysis_files/analysis_45_9.png"
 >
 </div>
 
@@ -15107,7 +15094,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_10.png"
+<img src="analysis_files/analysis_45_10.png"
 >
 </div>
 
@@ -15121,7 +15108,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_11.png"
+<img src="analysis_files/analysis_45_11.png"
 >
 </div>
 
@@ -15135,7 +15122,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_12.png"
+<img src="analysis_files/analysis_45_12.png"
 >
 </div>
 
@@ -15149,7 +15136,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_13.png"
+<img src="analysis_files/analysis_45_13.png"
 >
 </div>
 
@@ -15163,7 +15150,7 @@ no selection
 
 
 <div class="output_png output_subarea ">
-<img src="analysis_files/analysis_46_14.png"
+<img src="analysis_files/analysis_45_14.png"
 >
 </div>
 
@@ -15228,7 +15215,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -15256,13 +15243,13 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
 <span class="n">t_gondii</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../InParanoid.C.parvum-T.gondii/C.parvum-T.gondii.orthoXML.xml&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
 <span class="n">p_falciparum</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../InParanoid.C.parvum-P.falciparum/C.parvum-P.falciparum.orthoXML.xml&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
-<span class="n">n_caninum</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../InParanoid.C.parvum-N.caninum/C.parvum-N.caninum.orthoXML&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+<span class="n">n_caninum</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../InParanoid.C.parvum-N.caninum/C.parvum-N.caninum.orthoXML.xml&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -15272,7 +15259,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">t_gondii_ortho</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15322,7 +15309,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p_falciparum_ortho</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15375,7 +15362,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_caninum_ortho</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15428,7 +15415,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-RA-p1&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> 
@@ -15446,7 +15433,7 @@ no selection
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15462,7 +15449,7 @@ no selection
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[141]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -15481,7 +15468,7 @@ Name: t_gondii_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15497,7 +15484,7 @@ Name: t_gondii_ortho, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[142]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -15516,7 +15503,7 @@ Name: p_falciparum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[143]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;n_caninum_ortho&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15532,7 +15519,7 @@ Name: p_falciparum_ortho, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[143]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -15551,7 +15538,7 @@ Name: n_caninum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="n">final</span><span class="p">[(</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;srank&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">final</span><span class="p">[</span><span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">]</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">]]</span>
@@ -15568,7 +15555,7 @@ Name: n_caninum_ortho, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[134]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -15674,7 +15661,7 @@ Name: n_caninum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="n">final</span><span class="p">[(</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;srank&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span> 
@@ -15682,7 +15669,7 @@ Name: n_caninum_ortho, dtype: int64</pre>
                   <span class="o">&amp;</span> <span class="o">~</span><span class="n">final</span><span class="p">[</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">]]</span>
 <span class="n">selection</span><span class="p">[[</span><span class="s1">&#39;desc&#39;</span><span class="p">,</span><span class="s1">&#39;srank&#39;</span><span class="p">,</span>
            <span class="s1">&#39;t_gondii_ortho&#39;</span><span class="p">,</span><span class="s1">&#39;n_caninum_ortho&#39;</span><span class="p">,</span><span class="s1">&#39;p_falciparum_ortho&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;SP(Sec/SPI)&#39;</span><span class="p">,</span><span class="s1">&#39;TM&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;ortho_analysis.csv&#39;</span><span class="p">)</span>
+          <span class="s1">&#39;SP(Sec/SPI)&#39;</span><span class="p">,</span><span class="s1">&#39;TM&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../out_data/ortho_analysis.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15699,11 +15686,11 @@ Name: n_caninum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#save finala dataset</span>
-<span class="n">final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;final_df.csv&#39;</span><span class="p">)</span>
+<span class="n">final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../out_data/final_df.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15713,54 +15700,13 @@ Name: n_caninum_ortho, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html_toc analysis.ipynb
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook analysis.ipynb to html_toc
-[NbConvertApp] Support files will be in analysis_files/
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Making directory analysis_files
-[NbConvertApp] Writing 405278 bytes to analysis.html
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
