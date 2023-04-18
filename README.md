@@ -1,8 +1,8 @@
 ![title](https://github.com/mtinti/oocyst_wall_proteome/blob/main/static/wcar.png)
 # Oocyst Wall Proteome
 
-[![Binder](binder placeholder)
-[![DOI]](zenodo placeholder)
+
+[![DOI](https://zenodo.org/badge/{github_id}.svg)](https://zenodo.org/badge/latestdoi/{github_id})
 
 
 # *paper title* 
