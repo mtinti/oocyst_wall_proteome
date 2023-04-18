@@ -1,8 +1,7 @@
 ![title](https://github.com/mtinti/oocyst_wall_proteome/blob/main/static/wcar.png)
 # Oocyst Wall Proteome
 
-
-[![DOI](https://zenodo.org/badge/{github_id}.svg)](https://zenodo.org/badge/latestdoi/{github_id})
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7842509.svg)](https://doi.org/10.5281/zenodo.7842509)
 
 
 # *paper title* 
